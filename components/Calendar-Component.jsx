@@ -97,6 +97,9 @@ const Calendar = () => {
                 min="1"
                 max="12"
             />
+            <span style={{ fontSize: '18px', margin: 20 }}>
+                {new Date(year, month - 1).toLocaleString('ru-RU', { month: 'long' })} {year}
+            </span>
             {selectedDay && selectedDayOfWeek && (
                 <h3>Вы выбрали {selectedDayOfWeek}: {selectedDay}</h3>
             )}
